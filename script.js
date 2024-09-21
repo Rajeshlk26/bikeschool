@@ -21,6 +21,33 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 ScrollTrigger.refresh();
 
+//Navbar
+// JavaScript to handle opening and closing of the sidebar
+function toggleSidebar(menuIcon, closeBtn, sidebar) {
+  // Show the sidebar and hide the menu icon
+  menuIcon.addEventListener('click', function() {
+      sidebar.classList.add('active'); // Show the sidebar
+      menuIcon.style.display = 'none'; // Hide the menu icon
+  });
+
+  // Hide the sidebar and show the menu icon
+  closeBtn.addEventListener('click', function() {
+      sidebar.classList.remove('active'); // Hide the sidebar
+      menuIcon.style.display = 'block'; // Show the menu icon
+  });
+}
+
+// Call the function after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeBtn = document.querySelector('.close-icon');
+  const sidebar = document.querySelector('.sidebar');
+
+  toggleSidebar(menuIcon, closeBtn, sidebar);
+});
+
+//heropage
+
 let mm = gsap.matchMedia();
 
   mm.add("(min-width: 501px)", () => {
@@ -34,8 +61,8 @@ let mm = gsap.matchMedia();
         scrub: 3,
       },
     });
-    tl.to(".page1 h1", { x: 250 }, "anim");
-    tl.to(".page1 h2", { x: -250 }, "anim");
+    tl.to(".page1 h1", { x: 100 }, "anim");
+    tl.to(".page1 h2", { x: -100 }, "anim");
     tl.to(".page1 video", { width: "90%" }, "anim");
 
     var tl2 = gsap.timeline({
@@ -50,13 +77,13 @@ let mm = gsap.matchMedia();
     tl2.to(".main", { backgroundColor: "#fff" });
   });
 
-  mm.add("(max-width: 500px)", () => {
+  mm.add("(max-width: 600px)", () => {
     // Mobile animations
     var tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".page1 h1",
         scroller: ".main",
-        start: "top 27%",
+        start: "top 70%",
         end: "top 0",
         scrub: 3,
       },

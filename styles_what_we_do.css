@@ -195,3 +195,76 @@
   display: block;
   max-height: 1000px; /* Increase this value if the content is taller */
 }
+
+@media (max-width: 600px) {
+  .what-we-do-section {
+    padding: 5vh 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .what-we-do-title h1 {
+    font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-title p {
+    font-size: 2.5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-content {
+    flex-direction: column; /* Change to column layout */
+  }
+
+  .what-we-do-card {
+    flex-direction: column; /* Change to column layout for cards */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .what-we-do-image {
+    margin-right: 0; /* Remove right margin */
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .what-we-do-text .number {
+    font-size: 15vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-text h2 {
+    font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+
+  .what-we-do-text p {
+    font-size: 2.2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .our-commitments-section h2 {
+    font-size: 4.5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .our-commitments-content {
+    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+  }
+
+  .our-commitments-item h3 {
+    font-size: 3vw; /* Adjusted font size for smaller screens */
+  }
+
+  .our-commitments-item p {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-section h2 {
+    font-size: 5vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item h3 {
+    font-size: 3vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item p {
+    font-size: 2vw; /* Adjusted font size for smaller screens */
+  }
+
+  .faqs-item-header {
+    font-size: 2.5vw; /* Adjusted font size for smaller screens */
+  }
+}

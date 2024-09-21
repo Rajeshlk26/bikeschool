@@ -1,15 +1,3 @@
-.main_p::-webkit-scrollbar {
-  width: 6px;
-}
-
-.main_p::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.8); /* Dark scrollbar color */
-  border-radius: 3px; /* Rounded corners for the scrollbar */
-}
-
-.main_p::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1); /* Background color of the scrollbar track */
-}
 .adventures-section {
   display: flex;
   flex-direction: column;
@@ -26,11 +14,14 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   overflow: hidden;
-  width: 80%;
+  width: calc(90% - 2rem); 
+  transition: transform 0.2s; 
+  height: 50vh;
 }
 
 .adventure-card.reverse {
   flex-direction: row-reverse;
+  height: 50vh;
 }
 
 .adventure-content {
@@ -52,14 +43,14 @@
 
 .adventure-image {
   flex: 1;
-  height: 300px;
-  overflow: hidden;
+  height: 60vh;
 }
 
 .adventure-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .btn {
@@ -77,23 +68,38 @@
   background-color: #0056b3;
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .adventure-card {
-    flex-direction: column;
-    width: 90%;
+    height: 30vh;
   }
 
   .adventure-card.reverse {
-    flex-direction: column;
-  }
-
-  .adventure-content {
-    padding: 1.5rem;
+    height: 30vh;
   }
 
   .adventure-image {
-    height: 200px;
+    height: 30vh; /* Adjust height for mobile */
+  }
+
+  .adventure-content {
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+
+  .adventure-content h2 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+  }
+
+  .adventure-content p {
+    font-size: 0.5rem; /* Adjust paragraph size for mobile */
+  }
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    transition: background-color 0.3s ease;
   }
 }
